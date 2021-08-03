@@ -1,0 +1,20 @@
+Connection String:  
+Server=localhost;Database=master;Trusted_Connection=True;
+
+Server Name:-
+DESKTOP-3PFV6IR
+
+SQL Administrator Username:-
+DESKTOP-3PFV6IR\Hp Pc
+
+SQL Server Instance:-
+DESKTOP-3PFV6IR
+
+Collation:
+SQL Server default collation
+
+Default UserName:
+sa
+
+Password:
+123

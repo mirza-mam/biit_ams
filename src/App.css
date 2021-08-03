@@ -1,0 +1,163 @@
+
+  .navbar{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .nav-link{
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+  }
+
+  .styleForNavLinks{
+    color: green !important;
+    background-color: white;
+  }
+
+  .bg_biit{
+      background-color: #063 !important;
+    }
+
+  .bg_forAll_Pgs_Excapt_Login{
+    background-color: #DCDCDC;
+  }
+  
+  .heading_biit, .AMS_login_Pg_heading{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+    text-align: center;
+  } 
+  
+  .AMS_login_Pg_heading{
+    color: white;
+    font-size: 26px;
+    
+    padding: 5px;
+  }
+
+  .AMS_login_Pg_Logo{
+    
+    width: 11%;
+    margin:auto;
+    padding:17px 9px 10px 9px;
+  }
+  
+  .LoginForm_Background{
+    background-color: #282c34 !important; 
+    height:591px;
+  }
+  
+  .login_Form_Container{
+    width: 400px;
+    height: 270px;
+    margin-left: auto;
+    margin-right:auto ;
+    background-color: white;
+    border-radius: 9px;
+    padding: 30px 10px 30px 10px;
+  }
+  
+  .login_Frm_Heading{
+    text-align: center;
+    color:#063;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .login_Frm_Btn{
+    width:100%;
+    padding: 13px;
+    margin-top: 4px;
+    background-color: #063;
+    border:none;
+    border-radius: 7px;
+    color:white;
+  }
+  
+  .table_bordered_custom tr, .table_bordered_custom td{
+    border:1px solid lightgray !important;
+  }
+
+  .View_btns{
+    background-color: #063; 
+    color:white;
+    padding: 6px 10px 6px 10px;
+    border-style: none;
+    border-radius: 5px;
+  }
+  
+
+  /* ------------------------DIR_Pg CSS------------------------- */
+    .DIR_Pg_Top_Btns{
+      background-color: #063 !important;
+      color: white !important; 
+      transition: 0.5s;
+    }
+
+    .DIR_Pg_Top_Btns:hover{
+      background-color: white !important;
+      color: #063 !important; 
+      border: 1px solid #063;
+    }
+  /* ------------------------/DIR_Pg CSS------------------------- */
+
+  /* ------------------------SAMP CSS------------------------- */
+  .SAMP_Top_Grid_Container .SAMP_MainHeading_Div{
+ 
+    float: left;
+    width: 70%;
+  }
+
+  .SAMP_Top_Grid_Container .SAMP_ListGrid_Btns_Div{
+    
+    float: left;
+    width: 30%;
+    padding: 29px 0px 29px 114px;
+  }
+
+  #StudentsGrid div{
+    float: left;
+  }
+
+  .SAMP_Stu_ImgList_Img{
+
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+  }
+
+  .SAMP_Stu_Grid_Img_Div{
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .ShowStudentsGrid_Save_btn{
+    color: red;
+    border: 1px solid white;
+    float: right;
+    margin-right: 10px;
+  }
+  /* ------------------------/SAMP CSS------------------------- */
+
+
+  /* ------------------------Media Quries------------------------- */
+  @media screen and  (max-width:768px){
+    
+    .SAMP_Top_Grid_Container .SAMP_ListGrid_Btns_Div{
+      padding: 29px 0px 29px 14px;
+    }
+
+  }
+
+  @media screen and  (max-width:425px){
+
+    .SAMP_Top_Grid_Container .SAMP_MainHeading_Div{
+
+      width: 50%;
+    }
+
+    .SAMP_Top_Grid_Container .SAMP_MainHeading_Div h1{
+      font-size: 28px;
+    }
+
+  }

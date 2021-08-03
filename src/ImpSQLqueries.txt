@@ -1,0 +1,99 @@
+/*
+select * from StudentsCourses
+
+DELETE FROM enrolledStudents WHERE Roll_No = '18-arid-0255'
+
+ALTER TABLE StudentsCourses ADD id int NOT NULL;
+
+ALTER TABLE StudentsCourses ADD CONSTRAINT PK_StudentsCourses PRIMARY KEY CLUSTERED (id);
+
+ALTER TABLE StudentsCourses
+DROP COLUMN Course_name;
+
+INSERT INTO enrolledStudents(P_id, Roll_No, Name, Degree, Shift, Semester, Image)
+VALUES (4, '18-arid-0255', 'Mirza Abdullah Izhar' , 'MCS', 'Eve', 4, 'Mirza Abdullah Izhar.jpg');
+
+UPDATE TeachersSchedule SET Slot = '08:30 - 10:00AM', Semester = 1, Course = 'DB', Day = 'Monday' WHERE id= 1;
+
+*/
+
+
+/* **********For Auto Increment********* */
+CREATE TABLE Persons (
+    Personid int IDENTITY(1,1) PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (Personid)
+);
+
+
+SELECT
+ enrolledStudents.Roll_No,
+ enrolledStudents.Name, 
+ enrolledStudents.Degree,
+ enrolledStudents.Shift,
+ enrolledStudents.Semester,
+ enrolledStudents.Image,
+ StudentsCourses.Course_Name
+FROM
+ enrolledStudents, StudentsCourses
+WHERE
+  enrolledStudents.Roll_No = StudentsCourses.Stu_Roll_No
+AND
+ enrolledStudents.Degree = 'MCS'
+AND
+ enrolledStudents.Shift = 'Eve'
+AND
+ enrolledStudents.Semester = 4
+AND
+ StudentsCourses.Course_name = 'DDB';
+
+
+//Director Page for selecting the attendance of a specific class
+select 
+enrolledStudents.Roll_No, enrolledStudents.Name, enrolledStudents.Degree, enrolledStudents.Shift, enrolledStudents.Semester, AttendanceTbl.Course
+from
+AttendanceTbl, enrolledStudents
+where
+AttendanceTbl.Roll_No = enrolledStudents.Roll_No
+AND
+AttendanceTbl.Course = 'DDB'
+AND
+ enrolledStudents.Degree = 'MCS'
+AND
+ enrolledStudents.Shift = 'Eve'
+AND
+ enrolledStudents.Semester = 4
+
+
+
+/* *******************************Queries for Selecting Short Attendance Students WRT Teacher********************************** */
+
+
+/* For selecting DISTINCT Data of a Teacher */
+Select DISTINCT Course, Degree , Shift , Semester ,T_id from AttendanceTbl where T_id = 2
+
+
+/* For total classes */
+select COUNT(Roll_No) as [Total Classes], Roll_No ,Course, Degree, Shift, Semester
+from AttendanceTbl 
+where T_id = 2 AND Course = 'DDB' AND Degree = 'MCS' AND Shift = 'Eve' AND Semester = 4
+group by Roll_No, Course,  Degree, Shift, Semester;
+
+
+/* For selecting total number of Classes taken by a Student of a Specfic Teacher in a Specific Subject*/
+Select COUNT(Roll_No) as [Total Classes Taken], Roll_No 
+from AttendanceTbl 
+where T_id = 2 AND Roll_No = '18-arid-0265' AND Status = 'Present' AND Course = 'DDB' AND Degree = 'MCS' AND Shift = 'Eve' AND Semester = 4
+group by Roll_No;
+
+
+Select * from AttendanceTbl
+
+
+/********Select Only Last Row**********/
+SELECT TOP 1 * FROM Lock ORDER BY id DESC; 
+
+
+
